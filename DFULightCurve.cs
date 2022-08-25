@@ -16,7 +16,7 @@ namespace BLB.LightCurve
     public class DFULightCurveLoader : MonoBehaviour 
     {
         public static Mod mod;
-    //like in the last example, this is used to setup the Mod.  This gets called at Start state.
+        //like in the last example, this is used to setup the Mod.  This gets called at Start state.
         [Invoke(StateManager.StateTypes.Start, 0)]
         public static void Init(InitParams initParams)
         {
@@ -25,16 +25,16 @@ namespace BLB.LightCurve
             new GameObject("DFULightCurveLoader").AddComponent<DFULightCurveLoader>(); // Add script to the scene.    
             AnimationCurve curve = new AnimationCurve(
                 new Keyframe(0.0f, 0.0f), 
-                new Keyframe(0.075f, 0.25f),
-                new Keyframe(0.5f, 0.4f),
-                new Keyframe(0.915f, 0.25f),
+                new Keyframe(0.05f, 0.375f),
+                new Keyframe(0.5f, 1.0f),
+                new Keyframe(0.95f, 0.375f),
                 new Keyframe(1.0f, 0.0f)
             );
             curve.postWrapMode = WrapMode.ClampForever;
             curve.preWrapMode = WrapMode.ClampForever;
             SunlightManager sunlightManager = GameManager.Instance.SunlightManager;
             sunlightManager.LightCurve = curve;
-            Debug.Log("Changed Light Curve");
+            Debug.Log("BLB: Changed Light Curve");
 
             mod.IsReady = true;
         }

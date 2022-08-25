@@ -1,5 +1,5 @@
 {
-    "ModTitle": "Sunlight Curve Changer",
+    "ModTitle": "blb-lightcurve-changer",
     "ModVersion": "0.1",
     "ModAuthor": "BadLuckBurt",
     "ContactInfo": "x",
@@ -7,7 +7,6 @@
     "ModDescription": "Changes the sunlight curve brightness",
     "GUID": "38e76c3e-4c11-4480-bc93-16221af5ba61",
     "Files": [
-        "Assets/Game/Mods/dfu-light-curve/BLBLightCurve.dfmod.json",
-        "Assets/Game/Mods/dfu-light-curve/DFULightCurve.cs"
+        "Assets/Game/Mods/blb-lightcurve-changer/DFULightCurve.cs"
     ]
 }
